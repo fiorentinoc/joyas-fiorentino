@@ -1,0 +1,43 @@
+$font: 'Ballet', cursive;
+
+/* Aplicacion de mapa(2) */
+$estiLogo:(
+    fontfamily1:  $font,
+    fontfamily2:  initial,
+    fontsize1:   3em,
+    fontsize2:   0.75em,
+    color1:      black,
+    color2:      white,
+    color3:      #F2D479,
+    timeAni:     1s
+);
+.logo {
+    $fontsize: map-get($estiLogo, fontsize1);
+    padding-top: 1em;
+    padding-right: 5em;
+
+
+    .brand {
+        color: map-get($estiLogo, color3);
+        font-family: map-get($estiLogo, fontfamily1);
+        font-size: $fontsize;
+        /* transition: font-size map-get($estiLogo, timeAni); */
+    }
+    .brand-text {
+        color: map-get($estiLogo, color3);
+        font-size:map-get($estiLogo, fontsize2);
+        text-align: center;
+        position: relative;
+        top: -2em;
+        right: -2.9em;
+        /* transition: font-size map-get($estiLogo, timeAni) */
+    }
+    /* &:hover{
+        .brand{
+            font-size: calc(#{$fontsize} *1.5);
+        }
+        .brand-text{
+            font-size: calc(#{$fontsize} *0.375);
+        }
+    } */
+}

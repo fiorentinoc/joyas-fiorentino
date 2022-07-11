@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+
+
+$bd-color: #010A26;
+/* $bd-color: black; */
+
+$aux-color: rgb(146, 255, 22);
+$font-family-base: 'Montserrat', sans-serif;
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+/* $box-shadow-lg: 0 1rem 3rem rgba($yellow, .175) !important; */
+body {
+    background-color: $bd-color
+}
+
+/* Importacion de módulos */
+@import "efecto-header";
+@import "logo";
+
+/* Aplicacion de Mixins */
+@mixin cu-cont($display, $jus-cont) {
+    display: $display;
+    justify-content: $jus-cont;
+}
+
+.cu-cont-carousel {
+    @include cu-cont(flex, center)
+    background-color: black;
+}
+
+.custom-carousel {
+    max-width: 600px;
+}
+
+.cu-hero-image {
+    background-image: url(../img/store2.jpg);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+.rs {
+    padding-right: 3em;
+}
+
+/* Custom NAVBAR */
+.nav-link {
+    color: #F2D479;
+}
+.navbar-nav .nav-link.active {
+    color: #face07;
+    border-bottom: solid 2px;
+}
+/* Custom Footer */
+.link-secondary {
+    color: #F2D479 !important; }
+    .link-secondary:hover, .link-secondary:focus {
+        color: #face07 !important; }
+
+.border-top {
+    border-color: #face07 !important;
+}
+.ff-cursiva {
+    font-family: 'Ballet', cursive;
+}
+.fs-2 {
+    font-size: 2rem;
+}
+.p-30 {
+    padding-left: 6rem;
+}
+.card {
+    --bs-card-bg: #010A26;
+}
+.card-body {
+    color: #F2D479;
+    background-color: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+.col-border-radius {
+    border-radius: 5px;
+}
+.shadow {
+    /* box-shadow: 0 0.5rem 1rem rgba(255, 255, 4, 0.15) !important; */
+    box-shadow: rgba(255, 255, 4, 0.19) 0px 10px 20px, rgba(255, 255, 4, 0.23) 0px 6px 6px;
+}
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(255, 255, 4, 0.175) !important;}
+.vermas {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.btn-custom1 {
+    --bs-btn-color: #168BF2;
+    --bs-btn-border-color: #168BF2;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #6c757d;
+    --bs-btn-hover-border-color: #6c757d;
+    --bs-btn-focus-shadow-rgb: 108, 117, 125;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6c757d;
+    --bs-btn-active-border-color: #ffdd00;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #6c757d;
+    --bs-btn-disabled-bg: transparent;
+    --bs-gradient: none; }
+.btn-custom2 {
+    --bs-btn-color: #168BF2;
+    --bs-btn-border-color: #168BF2;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #6c757d;
+    --bs-btn-hover-border-color: #6c757d;
+    --bs-btn-focus-shadow-rgb: 108, 117, 125;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6c757d;
+    --bs-btn-active-border-color: #ffdd00;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #6c757d;
+    --bs-btn-disabled-bg: #03318C;
+    --bs-gradient: none; 
+    --bs-btn-bg: #021859;}
+
+.precio {
+    padding: 1em;
+}
+.form-img {
+    background-image: url(../img/anillo-solitario.jpg);
+    width: 350px;
+    background-size: cover;
+    opacity: 0.5;
+}
